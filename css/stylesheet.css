@@ -1,0 +1,372 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  background-color: grey;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  height: 100%;
+  background-image: url("../images/quantum-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+body p {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 2.3rem;
+  color: #486dc5;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  word-break: break-word;
+}
+h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: .7rem;
+  word-break: break-word;
+}
+#mobile-nav-hamburger {
+  display: none;
+}
+nav {
+  margin: 1rem;
+  margin-top: 0;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+nav ul li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+nav ul li a:hover {
+  opacity: .5;
+  cursor: pointer;
+  transition: .5s opacity;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+.white-logo {
+  width: 15rem;
+}
+#logo:hover {
+  opacity: unset;
+}
+#logo {
+  flex: 5;
+  justify-content: flex-end;
+  cursor: initial;
+}
+hr {
+  border: .5px solid #5c7bb7;
+  width: 95%;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  flex-flow: wrap;
+  max-width: 65rem;
+  margin: 0 auto;
+  height: 100%;
+}
+.container > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.left-content {
+  margin: 0 auto;
+  margin-top: -5rem;
+  width: 70%;
+  word-break: break-all;
+}
+.right-content {
+  margin-top: -10rem;
+  width: 90%;
+}
+/*flex row*/
+.row {
+  display: flex;
+  background-color: #445f94;
+}
+/*flex:1 block containers*/
+.block-1 {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.block-1 p {
+  color: #b5c4e2;
+}
+.infused-with-flavors-header {
+  padding-top: 4rem;
+  justify-content: center;
+  text-align: center;
+}
+.fruit-block-container {
+	padding-top: 3rem;
+}
+.fruit-icon {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+.what-makes-quantum-different-container {
+  background-color: #2b2b2b;
+}
+.brewery-image {
+  background-image: url("../images/brewery-image.jpg");
+  background-size: cover;
+  height: 22rem;
+  background-position: center;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-header {
+  text-align: center;
+  justify-content: center;
+  padding-top: 3rem;
+  background-color: #254584;
+}
+.form-subscribe {
+  display: flex;
+  background-color: #254584;
+  height: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  justify-content: center;
+  -webkit-box-shadow: 0px 6px 8px 0px rgba(17, 49, 109);
+  -moz-box-shadow: 0px 6px 8px 0px rgba(179, 179, 179, 1);
+  box-shadow: 0px 6px 8px 0px rgb(17, 49, 109);
+}
+.form-subscribe > * {
+  width: 22rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.form-subscribe > input {
+  padding: 1rem;
+  border: none;
+}
+.subscribe-button {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-bottom: 3px solid #d53434;
+  background-color: #f95c5c;
+}
+.subscribe-button:hover {
+  opacity: .8;
+  transition: .5s opacity;
+}
+.footer-logo-container {
+  justify-content: center;
+  background: #193477 url("../images/rays-background.svg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+#footer-logo {
+  width: 14rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-self: center;
+}
+.black-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  background-color: #313131;
+  color: gray;
+}
+/*MEDIA QUERIES***************************************************************************/
+/*keep text from disappearing in white space*/
+@media screen and (max-width: 1030px) {
+  body {
+    background-size: unset;
+  }
+}
+/*ipads*/
+@media screen and (min-height: 800px) and (max-width:1300px) {
+  .left-content {
+    width: 100%;
+    margin-top: -20rem;
+  }
+  .right-content {
+    margin-top: -35rem;
+  }
+}
+@media screen and (min-width:720px) {
+  /* 'squiggles' before and after headers */
+  h2::before {
+    content: url("../images/squiggle.svg");
+    width: 3.5rem;
+    position: absolute;
+    margin-left: -3.5rem;
+  }
+  h2::after {
+    content: url("../images/squiggle.svg");
+    width: 3.5rem;
+    position: absolute;
+  }
+}
+@media screen and (max-width:700px) {
+  h1 {
+    color: #264584;
+  }
+  #mobile-nav-hamburger {
+    flex-direction: row;
+    top: 0;
+    display: inline-flex;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    justify-content: flex-end;
+    background-color: white;
+    color: #264584;
+    box-shadow: 0px 3px 7px 0px rgba(119, 119, 119, 0.13);
+  }
+  #mobile-logo {
+    flex: 1;
+    width: 11rem;
+  }
+  #hamburger-icon {
+    flex: 1;
+    margin-right: .5rem;
+    cursor: pointer;
+    text-align: right;
+  }
+  nav {
+    margin: 0;
+    margin-top: 2.7rem;
+    position: fixed;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: padding-bottom .6s ease;
+    -moz-transition: padding-bottom .6s ease;
+    -webkit-transition: padding-bottom .6s ease;
+    -o-transition: padding-bottom .6s ease;
+    -ms-transition: padding-bottom .6s ease;
+  }
+  nav ul {
+    flex-direction: column;
+    background-color: #254584;
+  }
+  .active-menu-item {
+    border-bottom: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  nav ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 0;
+  }
+  nav a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+  #logo {
+    display: none;
+  }
+  .container {
+    display: block;
+    padding-top: 3rem;
+    height: auto;
+  }
+  .container > div {
+    display: block;
+    clear: both;
+    padding: 3rem;
+  }
+  .left-content, .right-content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .left-content img, .right-content img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .light-background-dark-text {
+    color: darkgray;
+    background-color: white;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .block-1 {
+    padding: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width:500px) {
+  .form-subscribe {
+    flex-direction: column;
+    height: auto;
+    padding-top: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .subscribe-button {
+    padding: 1rem;
+  }
+  .form-subscribe > * {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .form-subscribe input {
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    -webkit-box-sizing: border-box; /*prevent padding from increasing width*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width:320px) {
+	.black-footer-bar {
+		font-size: .5rem;
+	}
+	h2 {
+		font-size: 1.7rem;
+	}
+}
