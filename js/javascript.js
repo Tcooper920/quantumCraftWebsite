@@ -16,7 +16,7 @@ document.addEventListener("click", function () {
 	}
 });
 
-/* If widow grows larger than 700px wide, hide mobile nav dropdown menu */
+/* If window grows larger than 700px wide, hide mobile nav dropdown menu */
 function setBottomPaddingToZero() {
 	if (window.innerWidth > 700) {
 		navigation.style.paddingBottom = "0%";
