@@ -15,9 +15,9 @@ document.addEventListener("click", () => {
 });
 
 /* If window grows larger than 700px wide, hide mobile nav dropdown menu */
-function setBottomPaddingToZero() {
+function setBottomPaddingToZero() { 
 	if (window.innerWidth > 700) {
-		navigation.style.paddingBottom = "0%";
+		navigation.style.paddingBottom = "0%"; 
 	}
 }
 
@@ -25,12 +25,21 @@ window.onresize = setBottomPaddingToZero;
 
 
 // Smoothly scroll to each anchor point when the corresponding link is clicked
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-	anchor.addEventListener('click', function (e) {
-		e.preventDefault();
+document.addEventListener("click", (event) => {
+	const link = event.target.closest('a[href^="#"]');
+
+	if (!link) {
+		return;
+	}
+
+	event.preventDefault();
+
+	const offset = 100;
+	const targettedAnchor = document.querySelector(link.getAttribute('href'));
+	const targetPosition = targettedAnchor.getBoundingClientRect().top + window.scrollY - offset;
 		
-		document.querySelector(this.getAttribute('href')).scrollIntoView({
-			behavior: 'smooth'
-		});
+	window.scrollTo({
+		top: targetPosition,
+		behavior: 'smooth'
 	});
 });
