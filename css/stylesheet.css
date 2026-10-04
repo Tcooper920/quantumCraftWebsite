@@ -42,11 +42,13 @@ h3 {
 }
 #mobile-nav-hamburger {
   display: none;
+  z-index: 3;
 }
 nav {
   font-size: 1rem;
   margin: 1rem;
   margin-top: 0;
+  z-index: 2;
 }
 nav ul {
   display: flex;
@@ -278,7 +280,7 @@ footer {
   }
   #mobile-nav-hamburger {
     font-size: 2rem;
-    flex-direction: row;
+    flex-direction: row; 
     top: 0;
     display: inline-flex;
     position: fixed;
@@ -290,7 +292,6 @@ footer {
     background-color: white;
     color: #264584;
     box-shadow: 0px 3px 7px 0px rgba(119, 119, 119, 0.13);
-    z-index: 1;
   }
   #mobile-logo {
     flex: 1;
