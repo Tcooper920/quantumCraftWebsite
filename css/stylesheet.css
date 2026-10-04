@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* CSS Document */
 * {
   margin: 0;
   padding: 0;
@@ -12,25 +11,27 @@ body {
   color: white;
   font-family: 'Work Sans', sans-serif;
   height: 100%;
-  background-image: url("../images/quantum-background.jpg");
+  background-image: url("../images/quantum-background-darker.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: 50% 17%;
 }
 body p {
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.1rem;
+  font-size: 1.1rem;
 }
 h1 {
-  font-size: 2.3rem;
-  color: #486dc5;
+  font-size: 2.8rem;
   font-weight: 600;
-  margin-bottom: .5rem;
+  color: #ccac51;
+  margin-bottom: 1.1rem;
   word-break: break-word;
 }
 h2 {
   font-size: 1.9rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   word-break: break-word;
 }
 h3 {
@@ -43,6 +44,7 @@ h3 {
   display: none;
 }
 nav {
+  font-size: 1rem;
   margin: 1rem;
   margin-top: 0;
 }
@@ -86,12 +88,11 @@ hr {
   flex-flow: wrap;
   max-width: 65rem;
   margin: 0 auto;
-  height: 100%;
+  padding: 11rem 0rem 5rem 0rem;
 }
 .container > div {
-  flex: 1;
   display: flex;
-  align-items: center;
+  flex: 1;
 }
 .left-content {
   margin: 0 auto;
@@ -100,15 +101,28 @@ hr {
   word-break: break-all;
 }
 .right-content {
-  margin-top: -10rem;
   width: 90%;
 }
-/*flex row*/
+.container-lightblue-background {
+  background-color: #445f94;
+  position: relative; 
+  -webkit-box-shadow: 0px 6px 8px 0px rgb(37 37 37);
+  -moz-box-shadow: 0px 6px 8px 0px rgb(37 37 37);
+  box-shadow: 0px 6px 8px 0px rgb(37 37 37);
+}
+.container-darkblue-background {
+  background-color: #254584;
+}
+.container-black-background {
+  background-color: #2b2b2b;
+}
+/* flex row */
 .row {
   display: flex;
-  background-color: #445f94;
+  max-width: 70rem;
+  margin: 0 auto;
 }
-/*flex:1 block containers*/
+/* flex:1 block containers */
 .block-1 {
   flex: 1;
   text-align: center;
@@ -132,14 +146,12 @@ hr {
   width: 10rem;
   margin-bottom: 1rem;
 }
-.what-makes-quantum-different-container {
-  background-color: #2b2b2b;
-}
 .brewery-image {
   background-image: url("../images/brewery-image.jpg");
   background-size: cover;
   height: 22rem;
   background-position: center;
+  max-width: 100%;
 }
 footer {
   display: flex;
@@ -148,13 +160,11 @@ footer {
 .subscribe-header {
   text-align: center;
   justify-content: center;
-  padding-top: 3rem;
-  background-color: #254584;
+  padding: 3rem 3rem 0rem 3rem;
 }
 .form-subscribe {
   display: flex;
   background-color: #254584;
-  height: 2.5rem;
   padding-top: 1rem;
   padding-bottom: 3rem;
   padding-left: 1.5rem;
@@ -163,6 +173,7 @@ footer {
   -webkit-box-shadow: 0px 6px 8px 0px rgba(17, 49, 109);
   -moz-box-shadow: 0px 6px 8px 0px rgba(179, 179, 179, 1);
   box-shadow: 0px 6px 8px 0px rgb(17, 49, 109);
+  z-index: 1; 
 }
 .form-subscribe > * {
   width: 22rem;
@@ -180,6 +191,7 @@ footer {
   color: white;
   font-weight: bold;
   font-size: 1rem;
+  padding: 1rem;
   border: none;
   cursor: pointer;
   border-bottom: 3px solid #d53434;
@@ -194,6 +206,7 @@ footer {
   background: #193477 url("../images/rays-background.svg");
   background-size: cover;
   background-position: center;
+  max-width: 100%;
   z-index: -1;
 }
 #footer-logo {
@@ -210,25 +223,22 @@ footer {
   background-color: #313131;
   color: gray;
 }
+
 /*MEDIA QUERIES***************************************************************************/
-/*keep text from disappearing in white space*/
+
 @media screen and (max-width: 1030px) {
   body {
     background-size: unset;
   }
 }
-/*ipads*/
-@media screen and (min-height: 800px) and (max-width:1300px) {
+
+@media screen and (min-height: 800px) and (max-width:875px) {
   .left-content {
     width: 100%;
-    margin-top: -20rem;
-  }
-  .right-content {
-    margin-top: -35rem;
   }
 }
+
 @media screen and (min-width:720px) {
-  /* 'squiggles' before and after headers */
   h2::before {
     content: url("../images/squiggle.svg");
     width: 3.5rem;
@@ -241,22 +251,46 @@ footer {
     position: absolute;
   }
 }
+
+@media screen and (min-width:700px) and (max-width:1130px) {
+  .right-content {
+    margin-bottom: 8rem;
+  }
+  .container {
+    padding: 5rem 0rem 0rem 0rem;
+  }
+}
+
+@media screen and (min-width:701px) {
+  .right-content p {
+    color: #eaeaea;
+  }
+}
+
 @media screen and (max-width:700px) {
+  body {
+    background-image: url("../images/quantum-background-darker.jpg");
+    background-size: cover;
+    background-position: initial;
+  }
   h1 {
     color: #264584;
   }
   #mobile-nav-hamburger {
+    font-size: 2rem;
     flex-direction: row;
     top: 0;
     display: inline-flex;
     position: fixed;
     align-items: center;
     width: 100%;
-    font-size: 2rem;
+    padding: .5rem;
+    box-sizing: border-box;
     justify-content: flex-end;
     background-color: white;
     color: #264584;
     box-shadow: 0px 3px 7px 0px rgba(119, 119, 119, 0.13);
+    z-index: 1;
   }
   #mobile-logo {
     flex: 1;
@@ -270,7 +304,6 @@ footer {
   }
   nav {
     margin: 0;
-    margin-top: 2.7rem;
     position: fixed;
     width: 100%;
     max-height: 0px;
@@ -284,6 +317,7 @@ footer {
   nav ul {
     flex-direction: column;
     background-color: #254584;
+    padding-top: 5rem;
   }
   .active-menu-item {
     border-bottom: none;
@@ -291,7 +325,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.4);
   }
   nav ul li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 	padding: 0;
   }
   nav a {
@@ -306,6 +340,7 @@ footer {
   .container {
     display: block;
     padding-top: 3rem;
+    padding-bottom: 0;
     height: auto;
   }
   .container > div {
@@ -323,7 +358,7 @@ footer {
     width: 90%;
   }
   .light-background-dark-text {
-    color: darkgray;
+    color: #737373;
     background-color: white;
   }
   .row {
@@ -334,8 +369,6 @@ footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-}
-@media screen and (max-width:500px) {
   .form-subscribe {
     flex-direction: column;
     height: auto;
@@ -357,12 +390,16 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
-    -webkit-box-sizing: border-box; /*prevent padding from increasing width*/
+    -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width:320px) {
+  .container {
+    padding-bottom: 0;
+  }
 	.black-footer-bar {
 		font-size: .5rem;
 	}
